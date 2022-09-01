@@ -1,0 +1,111 @@
+@import url("https: //fonts.googleapis.com/css2?family=Anek+Telugu:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Anek Telugu', sans-serif;
+  letter-spacing: 2px;
+}
+
+textarea {
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+#container {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  background-color: #FFF0E4;
+  position: absolute;
+  top: 0;
+}
+
+#container .editor-container, #container .preview-container {
+  margin: auto;
+  margin-top: 50px;
+  border: 1px solid black;
+  -webkit-box-shadow: -5px 5px black;
+          box-shadow: -5px 5px black;
+}
+
+#container .editor-container .container-title, #container .preview-container .container-title {
+  height: 40px;
+  line-height: 40px;
+  background-color: #FFF2FF;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+#container .editor-container .container-title i, #container .preview-container .container-title i {
+  margin-right: 10px;
+}
+
+#container .editor-container .container-title .fa-solid, #container .preview-container .container-title .fa-solid {
+  float: right;
+  line-height: 40px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#container .editor-container .container-title .fa-solid:hover, #container .preview-container .container-title .fa-solid:hover {
+  opacity: 0.5;
+}
+
+#container .editor-container #editor, #container .editor-container #preview, #container .preview-container #editor, #container .preview-container #preview {
+  width: 100%;
+  background-color: #FFF;
+  padding: 1rem;
+  overflow-y: wrap;
+  font-size: 16px;
+}
+
+#container .editor-container #editor, #container .preview-container #editor {
+  min-height: 200px;
+}
+
+#container .editor-container #preview, #container .preview-container #preview {
+  min-height: 300px;
+}
+
+#container .editor-container #preview h1, #container .editor-container #preview h2, #container .editor-container #preview h3, #container .editor-container #preview h4, #container .editor-container #preview h5, #container .editor-container #preview h6, #container .editor-container #preview p, #container .editor-container #preview div, #container .editor-container #preview ol, #container .editor-container #preview ul, #container .editor-container #preview blockquote, #container .editor-container #preview code, #container .editor-container #preview table, #container .preview-container #preview h1, #container .preview-container #preview h2, #container .preview-container #preview h3, #container .preview-container #preview h4, #container .preview-container #preview h5, #container .preview-container #preview h6, #container .preview-container #preview p, #container .preview-container #preview div, #container .preview-container #preview ol, #container .preview-container #preview ul, #container .preview-container #preview blockquote, #container .preview-container #preview code, #container .preview-container #preview table {
+  margin: 0.5rem;
+}
+
+#container .editor-container #preview ol, #container .editor-container #preview ul, #container .preview-container #preview ol, #container .preview-container #preview ul {
+  margin-left: 2rem;
+}
+
+#container .editor-container #preview code, #container .preview-container #preview code {
+  color: #FFF;
+  padding: 0.125rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  background-color: black;
+}
+
+#container .editor-container #preview img, #container .preview-container #preview img {
+  margin: 1rem;
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#container .editor-container {
+  max-width: 600px;
+}
+
+#container .preview-container {
+  max-width: 800px;
+  margin-bottom: 50px;
+}
+/*# sourceMappingURL=main.css.map */
