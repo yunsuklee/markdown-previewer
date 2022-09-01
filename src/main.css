@@ -12,6 +12,7 @@
 textarea {
   overflow: auto;
   outline: none;
+  resize: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -23,8 +24,7 @@ textarea {
 
 #container {
   width: 100%;
-  min-height: 100%;
-  height: auto;
+  min-height: 100vh;
   background-color: #FFF0E4;
   position: absolute;
   top: 0;
@@ -63,6 +63,7 @@ textarea {
 
 #container .editor-container #editor, #container .editor-container #preview, #container .preview-container #editor, #container .preview-container #preview {
   width: 100%;
+  height: calc(100% - 40px);
   background-color: #FFF;
   padding: 1rem;
   overflow-y: wrap;
@@ -75,6 +76,7 @@ textarea {
 
 #container .editor-container #preview, #container .preview-container #preview {
   min-height: 300px;
+  height: auto;
 }
 
 #container .editor-container #preview h1, #container .editor-container #preview h2, #container .editor-container #preview h3, #container .editor-container #preview h4, #container .editor-container #preview h5, #container .editor-container #preview h6, #container .editor-container #preview p, #container .editor-container #preview div, #container .editor-container #preview ol, #container .editor-container #preview ul, #container .editor-container #preview blockquote, #container .editor-container #preview code, #container .editor-container #preview table, #container .preview-container #preview h1, #container .preview-container #preview h2, #container .preview-container #preview h3, #container .preview-container #preview h4, #container .preview-container #preview h5, #container .preview-container #preview h6, #container .preview-container #preview p, #container .preview-container #preview div, #container .preview-container #preview ol, #container .preview-container #preview ul, #container .preview-container #preview blockquote, #container .preview-container #preview code, #container .preview-container #preview table {
@@ -96,16 +98,12 @@ textarea {
 #container .editor-container #preview img, #container .preview-container #preview img {
   margin: 1rem;
   width: 90%;
+  max-width: 1000px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-#container .editor-container {
-  max-width: 600px;
-}
-
 #container .preview-container {
-  max-width: 800px;
   margin-bottom: 50px;
 }
 /*# sourceMappingURL=main.css.map */

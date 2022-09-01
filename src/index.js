@@ -24,11 +24,11 @@ class App extends React.Component {
 
     this.state = {
       textarea: '',
-      editorWidth: 60,
-      editorHeight: 20,
+      editorWidth: '60%',
+      editorHeight: '20%',
       editorDisplay: '',
-      previewWidth: 80,
-      previewHeight: 30,
+      previewWidth: '80%',
+      previewHeight: '30%',
       previewDisplay: ''
     };
 
@@ -48,18 +48,18 @@ class App extends React.Component {
   handleClickEditor(event) {
     event.preventDefault();
 
-    if (this.state.editorWidth === 90) {
+    if (this.state.editorWidth === '90%') {
       this.setState({
         textarea: this.state.textarea,
-        editorWidth: 60,
-        editorHeight: 20,
+        editorWidth: '60%',
+        editorHeight: '20%',
         previewDisplay: ''
       });
     } else {
       this.setState({
         textarea: this.state.textarea,
-        editorWidth: 90,
-        editorHeight: 90,
+        editorWidth: '90%',
+        editorHeight: '90vh',
         previewDisplay: 'none'
       });
     }
@@ -68,18 +68,18 @@ class App extends React.Component {
   handleClickPreview(event) {
     event.preventDefault();
 
-    if (this.state.previewWidth === 90) {
+    if (this.state.previewWidth === '90%') {
       this.setState({
         textarea: this.state.textarea,
-        previewWidth: 80,
-        previewHeight: 30,
+        previewWidth: '80%',
+        previewHeight: '30%',
         editorDisplay: ''
       });
     } else {
       this.setState({
         textarea: this.state.textarea,
-        previewWidth: 90,
-        previewHeight: 90,
+        previewWidth: '90%',
+        previewHeight: '90vh',
         editorDisplay: 'none'
       });
     }
@@ -91,8 +91,8 @@ class App extends React.Component {
         <div 
           className="editor-container"
           style={{ 
-            width: this.state.editorWidth + '%', 
-            height: this.state.editorHeight + '%', 
+            width: this.state.editorWidth, 
+            height: this.state.editorHeight, 
             display: this.state.editorDisplay
           }}
         >
@@ -114,8 +114,8 @@ class App extends React.Component {
         <div 
           className="preview-container"
           style={{ 
-            width: this.state.previewWidth + '%', 
-            height: this.state.previewHeight + '%',
+            width: this.state.previewWidth, 
+            minHeight: this.state.previewHeight,
             display: this.state.previewDisplay,
             height: 'auto'
           }}
@@ -133,6 +133,9 @@ class App extends React.Component {
             id="preview"
             dangerouslySetInnerHTML={{
               __html: marked(this.state.textarea, { renderer: renderer })
+            }}
+            style={{
+              height: this.state.previewHeight
             }}
           />
         </div>

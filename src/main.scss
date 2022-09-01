@@ -13,6 +13,7 @@
 textarea {
   overflow: auto;
   outline: none;
+  resize: none;
 
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -26,8 +27,7 @@ textarea {
 
 #container {
   width: 100%;
-  min-height: 100%;
-  height: auto;
+  min-height: 100vh;
   background-color: $background;
   position: absolute;
   top: 0;
@@ -48,32 +48,31 @@ textarea {
       i {
         margin-right: 10px;
       }
-
       .fa-solid {
         float: right;
         line-height: 40px;
         vertical-align: middle;
         cursor: pointer;
       }
-
       .fa-solid:hover {
         opacity: 0.5;
       }
     }
     #editor, #preview {
       width: 100%;
+      height: calc(100% - 40px);
       background-color: $boxes;
       padding: 1rem;
       overflow-y: wrap;
       font-size: 16px;
     }
-
+    
     #editor {
       min-height: 200px;
     }
     #preview {
       min-height: 300px;
-
+      
       h1, h2, h3, h4, h5, h6, p, div, ol, ul, blockquote, code, table {
         margin: 0.5rem;
       }
@@ -90,15 +89,12 @@ textarea {
       img {
         margin: 1rem;
         width: 90%;
+        max-width: 1000px;
         object-fit: cover;
       }
     }
   } 
-  .editor-container {
-    max-width: 600px;
-  }
   .preview-container {
-    max-width: 800px;
     margin-bottom: 50px;
   }
 }
